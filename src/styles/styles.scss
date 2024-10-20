@@ -9,6 +9,7 @@
 
 .app-container {
   display: flex;
+  @include theme("background", "color-background");
 }
 
 @include master-theme("background", "color-background");
