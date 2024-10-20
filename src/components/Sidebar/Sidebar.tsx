@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {
 
   const navItems = user ? [...staticNavItems, profileNavItem] : staticNavItems;
 
-  const version = "v1.6.5";
+  const version = "v1.7.0";
   const commitDate = import.meta.env.VITE_COMMIT_DATE || "Unknown";
 
   return (
@@ -92,9 +92,11 @@ const Sidebar: React.FC = () => {
           </ul>
         </nav>
         {isOpen && (
-          <Tooltip text={`Last updated: ${commitDate}`}>
-            <div className="version">{version}</div>
-          </Tooltip>
+          <div className="version-container">
+            <Tooltip text={`Last updated: ${commitDate}`}>
+              <div className="version">{version}</div>
+            </Tooltip>
+          </div>
         )}
       </div>
       <ThemeModal
