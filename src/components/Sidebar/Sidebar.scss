@@ -1,5 +1,4 @@
-@import "../../styles/themes";
-@import "../../styles/mixins";
+@import "../../styles/common";
 
 .sidebar {
   position: fixed;
@@ -110,5 +109,24 @@
   .sidebar.open + & {
     width: calc(100% - 200px);
     margin-left: 200px;
+  }
+}
+
+@media screen and (max-width: 420px) { //Mobile phone
+  .sidebar {
+    &.open {
+      width: 115px;
+    }
+
+    .tooltip-container {
+      bottom: 10px;
+    }
+  }
+
+  .main-content {
+    .sidebar.open + & {
+      width: calc(100% - 115px);
+      margin-left: 115px;
+    }
   }
 }

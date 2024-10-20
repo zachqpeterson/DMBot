@@ -1,5 +1,4 @@
-@import "../styles/themes";
-@import "../styles/mixins";
+@import "../styles/common";
 
 .homepage {
   display: flex;
@@ -23,8 +22,6 @@
     .banner-image {
       max-width: 45%;
       max-height: 200px;
-      height: auto;
-      object-fit: contain;
     }
   }
 
@@ -133,14 +130,55 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 420px) { //Mobile phone
   .homepage {
-    .banner-container {
-      flex-direction: column;
+    padding: 1rem;
 
+    .banner-container {
+      gap: 2rem;
+      margin-bottom: 1rem;
+      
       .banner-image {
-        max-width: 90%;
-        margin-bottom: 1rem;
+        max-width: 50%;
+        max-height: 200px;
+      }
+    }
+
+    .status-container {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      width: 180px;
+      gap: 1rem;
+      padding: 1rem;
+
+      .status {
+        font-size: 0.8rem;
+  
+        .status-label {
+          font-weight: bold;
+          margin-right: 0.5rem;
+        }
+  
+        .status-value {
+          padding: 0.25rem 0.5rem;
+          border-radius: 4px;
+          font-weight: 500;
+        }
+  
+        .loading-spinner {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .action-buttons {
+      margin-bottom: 0;
+      gap: 0.5rem;
+
+      .icon-button {
+        width: 38px;
+        height: 38px;
       }
     }
   }
