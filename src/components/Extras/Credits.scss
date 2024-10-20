@@ -65,7 +65,12 @@
     margin-top: 1rem;
     margin-bottom: 0rem;
 
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
     .contributors-list {
+      gap: 0.5rem;
       .contributor {
         width: 100%;
         padding: 0.3rem;

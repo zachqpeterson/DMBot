@@ -114,19 +114,41 @@
 
 @media screen and (max-width: 420px) { //Mobile phone
   .sidebar {
+    .toggle-btn {
+      top: 5px;
+    }
+
     &.open {
-      width: 115px;
+      width: 95px;
+    }
+
+    .nav-menu {
+      padding-top: 35px;
+  
+      ul {
+        a {
+          padding-top: 5px;
+          padding-bottom: 6px;
+          padding-left: 8px;
+
+          li {
+            .nav-text {
+              font-size: 14px;
+            }
+          }
+        }
+      }
     }
 
     .tooltip-container {
-      bottom: 10px;
+      bottom: 0px;
     }
   }
 
   .main-content {
     .sidebar.open + & {
-      width: calc(100% - 115px);
-      margin-left: 115px;
+      width: calc(100% - 95px);
+      margin-left: 95px;
     }
   }
 }
