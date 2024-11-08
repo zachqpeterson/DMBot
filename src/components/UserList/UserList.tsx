@@ -131,8 +131,8 @@ const UserList: React.FC = () => {
       <div className="user-list-controls">
         <div className="sort-controls">
           <label>
-            Sort by:
-            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            Sort:
+            <select className="sort-controls-select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
               <option value="username">Username</option>
               <option value="elo">Rank</option>
               <option value="stats_total_score">Total Score</option>
@@ -141,12 +141,12 @@ const UserList: React.FC = () => {
               <option value="stats_avg_percent">Average Percent</option>
             </select>
           </label>
-          <button onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}>
+          <button className="sort-direction" onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}>
             {sortOrder === "asc" ? "▲" : "▼"}
           </button>
         </div>
-        <div className="compare-users">
-          <button onClick={() => setShowCompareModal(true)}>Compare Users</button>
+        <div>
+          <button className="compare-users" onClick={() => setShowCompareModal(true)}>Compare Users</button>
         </div>
         <Search
           search={search}

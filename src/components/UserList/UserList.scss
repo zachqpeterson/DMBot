@@ -196,21 +196,36 @@
 
     .user-list-controls {
       display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      margin-bottom: 1rem;
-      gap: 1rem;
+      flex-direction: row;
+      gap: 0rem;
 
-      .controls-left {
-        flex-direction: column;
-        align-items: stretch;
-      }
-  
       .sort-controls {
-        display: flex;
+        font-size: 14px;
         flex-direction: row;
-        gap: 1rem;
-        align-items: center;
+        align-items: start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .sort-controls-select {
+          width: 125px;
+          height: 30px;
+        }
+
+        .sort-direction {
+          width: 30px;
+          height: 30px;
+          line-height: 10px;
+          padding-left: 0.4rem;
+        }
+      }
+
+      .compare-users {
+        width: 125px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 10px;
+        margin-bottom: 0.5rem;
+        margin-left: 2.25rem;
       }
   
       label {
@@ -220,12 +235,60 @@
       }
   
       select {
-        padding: 0.5rem;
+        padding: 0.1rem;
       }
   
       button {
         padding: 0.5rem;
         border-radius: 4px;
+      }
+    }
+
+    .user-card-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .user-card {
+      padding: 0rem;
+      width: 100px;
+      height: 100px;
+
+      &.has-stats:hover {
+        width: 250px;
+      }
+
+      .user-info {
+        width: 100px;
+      }
+    
+      .user-avatar-container {
+        width: 50px;
+        height: 50px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+      
+        .rank-overlay-container {
+          .rank-overlay-text {
+            transform: translate(-50%, 53%);
+            font-size: 12px;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 14px;
+        width: 90px;
+      }
+
+      .user-stats {
+        margin-left: 0.5rem;
+    
+        p {
+          margin: 0.2rem 0;
+          font-size: 10px;
+          text-align: start;
+        }
       }
     }
   }

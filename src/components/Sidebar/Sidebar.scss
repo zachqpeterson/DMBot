@@ -7,7 +7,7 @@
   height: 100vh;
   transition: width 0.3s ease;
   width: 44px;
-  overflow: hidden;
+  overflow-x: hidden;
   @include theme("background", "color-sidebar");
 
   &.open {
@@ -146,6 +146,8 @@
   }
 
   .main-content {
+    width: calc(100% - 44px);
+    margin-left: 44px;
     .sidebar.open + & {
       width: calc(100% - 95px);
       margin-left: 95px;

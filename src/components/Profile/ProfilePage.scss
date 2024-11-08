@@ -169,3 +169,81 @@
     }
   }
 }
+
+@media screen and (max-width: 420px) { //Mobile phone
+  .profile-page {
+    padding: 1rem;
+    text-align: center;
+  
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: none;
+    }
+
+    .profile-header {
+      flex-direction: column;
+      gap: 1rem;
+  
+      .profile-info {
+        margin-bottom: 0rem;
+        padding: 1rem;
+    
+        .user-avatar-container {
+          left: 4%;
+          width: 60px;
+          height: 60px;
+  
+          .user-avatar {
+            width: 60px;
+            height: 60px;
+          }
+  
+          .rank-overlay-container {
+            .rank-overlay-text {
+              transform: translate(-50%, 80%);
+              font-size: 12px;
+            }
+          }
+        }
+  
+        .profile-details {
+          p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+  
+            strong {
+              margin-right: 0.5rem;
+            }
+          }
+  
+          .charter-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          
+            .charter-select {
+              padding: 0.25rem;
+              border: 1px solid;
+              border-radius: 4px;
+              font-size: 1rem;
+            }
+  
+            .charter-link {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              border-radius: 4px;
+              
+              .arrow-icon {
+                width: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

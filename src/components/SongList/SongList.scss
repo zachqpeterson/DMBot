@@ -76,14 +76,33 @@
 
 @media screen and (max-width: 420px) { //Mobile phone
   .song-list {
+    padding: 1rem;
+    text-align: center;
+
     .song-list-header {
+      display: flex;
+      flex-direction: column;
       align-items: center;
       margin-bottom: 1rem;
   
       h1 {
         font-size: 1.5rem;
-        margin-right: 1rem;
+        margin-right: 0rem;
       }
+
+      .filters {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+
+        .multi-select-dropdown {
+          margin: 0;
+          button {
+            font-size: 12px;
+          }
+        }
+      }
+      
     }
 
     .control-bar {

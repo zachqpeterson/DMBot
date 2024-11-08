@@ -220,3 +220,101 @@
     @include theme("color", "color-text-secondary");
   }
 }
+
+@media screen and (max-width: 420px) { //Mobile phone
+  .user-compare-modal {
+    .user-compare-side {
+      width: 40%;
+    }
+
+    .vs {
+      .vs-icon {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .selected-user {
+      .user-avatar {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 0.5rem;
+      }
+  
+      .user-name {
+        margin-bottom: 0.5rem;
+        font-size: 20px;
+        width: 120px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+  
+        &::after {
+          font-size: 18px;
+        }
+      }
+  
+      .user-stats {
+        .stat-row {
+          margin-bottom: 0.25rem;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .user-select {
+      input {
+        height: 30px;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      .user-dropdown {
+        max-height: 43vh;
+      }
+  
+      .user-option {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+
+        .user-avatar-small {
+          width: 30px;
+          height: 30px;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .comparison-results {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+    
+      .result-item {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    
+        .label {
+          font-weight: bold;
+          text-align: left;
+        }
+    
+        .value {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

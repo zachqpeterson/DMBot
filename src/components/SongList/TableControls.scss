@@ -249,3 +249,25 @@
     }
   }
 }
+
+@media screen and (max-width: 420px) { //Mobile phone
+  .search-controls {
+    .search-input-container {
+      input[type="text"] {
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 130px;
+        height: 30px;
+      }
+    }
+
+    .search-button {
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 14px;
+      width: 60px;
+      height: 30px;
+    }
+  }
+}

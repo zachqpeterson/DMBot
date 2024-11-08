@@ -334,20 +334,22 @@ const SongList: React.FC<SongListProps> = ({ commonSongs }) => {
     <div className="song-list">
       <div className="song-list-header">
         <h1>Song List</h1>
-        <MultiSelectDropdown
-          options={["drums", "guitar", "rhythm", "bass", "keys",]}
-          selectedOptions={selectedInstruments}
-          setSelectedOptions={setSelectedInstruments}
-          label="Instruments"
-          clearLabel="Any instrument"
-        />
-        <MultiSelectDropdown
-          options={["expert", "hard", "medium", "easy"]}
-          selectedOptions={selectedDifficulties}
-          setSelectedOptions={setSelectedDifficulties}
-          label="Difficulties"
-          clearLabel="Any difficulty"
-        />
+        <div className="filters">
+          <MultiSelectDropdown
+            options={["drums", "guitar", "rhythm", "bass", "keys",]}
+            selectedOptions={selectedInstruments}
+            setSelectedOptions={setSelectedInstruments}
+            label="Instruments"
+            clearLabel="Any instrument"
+          />
+          <MultiSelectDropdown
+            options={["expert", "hard", "medium", "easy"]}
+            selectedOptions={selectedDifficulties}
+            setSelectedOptions={setSelectedDifficulties}
+            label="Difficulties"
+            clearLabel="Any difficulty"
+          />
+        </div>
       </div>
       <div className="control-bar">
         <TableControls perPage={perPage} setPerPage={setPerPage} setPage={setPage} />
