@@ -67,6 +67,13 @@ const ProfilePage: React.FC = () => {
     }
   }, [userId, currentUser, authLoading, navigate]);
 
+  const handleCompareClick = () => {
+    navigate("/songs", { state: {
+      leftUser: currentUser,
+      rightUser: profileUser
+    } });
+  };
+
   const isOwnProfile = currentUser && currentUser.id === profileUser?.id;
   const selectedCharter = charters.find(charter => charter.id.toString() === selectedCharterId?.toString());
 
@@ -106,9 +113,18 @@ const ProfilePage: React.FC = () => {
                     </Link>
                   </p>
                 )}
+                {!isOwnProfile && (
+                  <button className="compare-button" onClick={() => handleCompareClick()}>
+                    Compare Scores
+                  </button>
+                )}
               </div>
             </div>
-            <ProfileStats userStats={profileUser.stats} elo={profileUser.elo} />
+            <ProfileStats
+              userStats={profileUser.stats}
+              elo={profileUser.elo}
+              eloHistory={profileUser.elo_history}
+            />
           </div>
           {selectedCharter && <CharterStats stats={selectedCharter.charter_stats} />}
           <div className="profile-scores">

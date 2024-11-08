@@ -61,11 +61,12 @@ const Sidebar: React.FC = () => {
 
   const navItems = user ? [...staticNavItems, profileNavItem] : staticNavItems;
 
-  const version = "v1.7.0";
+  const version = "v1.8.1";
   const commitDate = import.meta.env.VITE_COMMIT_DATE || "Unknown";
 
   return (
     <>
+      <UploadProgress />
       <KofiWidget isSidebarOpen={isOpen} />
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <button className="toggle-btn" onClick={toggleSidebar}>
@@ -106,7 +107,6 @@ const Sidebar: React.FC = () => {
         onClose={closeThemeModal}
         themes={themes}
       />
-      <UploadProgress />
     </>
   );
 };
