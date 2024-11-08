@@ -384,3 +384,77 @@
     .info-line .label { min-width: 76px; }
   }
 }
+
+@media screen and (max-width: 420px) { //Mobile phone
+  .song-modal {
+    .modal-content {
+      .modal-body {
+        padding: 1rem;
+      }  
+    }
+  }
+
+  .song-info {
+    padding: var(--gap-small);
+  
+    .song-art-box {
+      width: 120px;
+
+      .loading-spinner {
+        height: 100px;
+      }
+    }
+  }
+
+  .song-column {
+    flex-direction: row;
+  }
+
+  .parts {
+    display: flex;
+    flex-direction: row;
+  
+    .part {
+      width: 45px;
+  
+      .part-difficulty-numeral {
+        height: 10px;
+  
+        span {
+          font-size: 18px;
+        }
+      }
+  
+      .part-notes-info {
+        .note-count-item {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    gap: 0.5rem;
+
+    .feature {
+      height: 60px;
+      font-size: 14px;
+    }
+  }
+
+  .info-header {
+    font-size: 1rem;
+    width: 260px;
+  }
+
+  .info-line {
+    font-size: 12px;
+  }
+
+  .song-title {
+    font-size: 1.2rem;
+  }
+  
+  .song-artist { font-size: 1rem; }
+}
